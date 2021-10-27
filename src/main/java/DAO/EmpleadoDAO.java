@@ -6,9 +6,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+
 import DTO.Empleado;
 
 public class EmpleadoDAO {
+	
+	private static Logger logger = LogManager.getLogger(DepartamentoDAO.class);
+	
     public static ArrayList<Empleado> seleccionarUsuarios(){
         ArrayList<Empleado> empleados = new ArrayList<Empleado>();
         
@@ -37,6 +46,7 @@ public class EmpleadoDAO {
 	        }
 	        ps.close();
         } catch (SQLException e) {
+        	logger.error("Fallo al recuperar datos de la base de datos" + e.getMessage());
             e.printStackTrace();
         } 
         
