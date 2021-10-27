@@ -83,15 +83,15 @@ public class verEmpleados extends HttpServlet {
 					for (Empleado empleado : emps) {
 						out.println("<tr>");
 							out.println("<th>"+empleado.getCodigo()+("</th>"));
-							out.println("</th>"+empleado.getNombre()+"</tr>");
-							out.println("</th>"+empleado.getApellido1()+"</tr>");
-							out.println("</th>"+empleado.getApellido2()+"</tr>");
-							out.println("</th>"+empleado.getFechaNacimiento()+"</tr>");
-							out.println("</th>"+empleado.getLugarNacimiento()+"</tr>");
-							out.println("</th>"+empleado.getDireccion()+"</tr>");
-							out.println("</th>"+empleado.getTelefono()+"</tr>");
-							out.println("</th>"+empleado.getPuesto()+"</tr>");
-							out.println("</th>"+empleado.getCodDepartamento()+"</tr>");
+							out.println("<th>"+empleado.getNombre()+"</th>");
+							out.println("<th>"+empleado.getApellido1()+"</th>");
+							out.println("<th>"+empleado.getApellido2()+"</th>");
+							out.println("<th>"+empleado.getFechaNacimiento()+"</th>");
+							out.println("<th>"+empleado.getLugarNacimiento()+"</th>");
+							out.println("<th>"+empleado.getDireccion()+"</th>");
+							out.println("<th>"+empleado.getTelefono()+"</th>");
+							out.println("<th>"+empleado.getPuesto()+"</th>");
+							out.println("<th>"+empleado.getCodDepartamento()+"</th>");
 						out.println("</tr>");
 					}
 				out.println("</table>");

@@ -74,8 +74,8 @@ public class verDepartamentos extends HttpServlet {
 					for (Departamento departamento : departs) {
 						out.println("<tr>");
 							out.println("<th>"+departamento.getCodigo()+("</th>"));
-							out.println("</th>"+departamento.getNombre()+"</tr>");
-							out.println("</th>"+departamento.getCodResponsable()+"</tr>");
+							out.println("<th>"+departamento.getNombre()+"</th>");
+							out.println("<th>"+departamento.getCodResponsable()+"</th>");
 						out.println("</tr>");
 					}
 				out.println("</table>");
