@@ -1,14 +1,24 @@
 package DAO;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import DTO.Departamento;
 
 public class DepartamentoDAO {
+	
+	private static Logger logger = LogManager.getLogger(DepartamentoDAO.class);
+	
     public static ArrayList<Departamento> seleccionarUsuarios(){
         ArrayList<Departamento> departamentos = new ArrayList<Departamento>();
         
@@ -29,6 +39,7 @@ public class DepartamentoDAO {
 	        }
 	        ps.close();
         } catch (SQLException e) {
+        	logger.error("Fallo al recuperar datos de la base de datos" + e.getMessage());
             e.printStackTrace();
         } 
         
